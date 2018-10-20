@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Eticket </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Eticket</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <% if (currentUsuario) { %>
+                    <li>
+                        <a href="/edit">
+                            Hola,
+                            <%= currentUsuario.name() %>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/addevent">Agregar evento</a>
+                    </li>
+                    <li>
+                        <a><span class="badge"><%= currentUsuario.usrRole() %> </span></a>
+                    </li>
+                    <li>
+                        <a href="/logout">Salir</a>
+                    </li>
+                    <% } else { %>
+                        <li>
+                            <a href="/login"> Entrar</a>
+                        </li>
+                        <li>
+                            <a href="/signup">Registrar</a>
+                        </li>
+                        <% } %>
+            </ul>
+            
+    </div>
+    <div>
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="/Conciertos">Conciertos</a>
+                </li>
+                <li>
+                    <a href="/Deportes">Deportes</a>
+                </li>
+                 <li>
+                    <a href="/TC">Teatro/Cultura</a>
+                 </li>
+                <li>
+                    <a href="/Especial"> Especiales</a>
+                </li>
+             </ul>
+             </div>
+        </div>
+    <div class="container">
+        <% errors.forEach(function(error){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+            <% }) %>
+                <% infos.forEach(function(info) { %>
+                    <div class="alert alert-info" role="alert">
+                        <%= info %>
+                    </div>
+                    <% }) %>
+  
+

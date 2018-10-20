@@ -1,0 +1,12 @@
+<% include _header %>
+
+<h1>Registro de expedientes</h1>
+
+<form action="/addArc" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+        <input name="Archivo" type="file"/>
+    </div>
+    <input type="submit" value="Guardar" class="btn btn-primary btn-block"/>
+</form>
+
+<% include _footer %>

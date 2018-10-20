@@ -1,0 +1,13 @@
+<% include _header %>
+<h1> Eventos! 
+<a href="/addevent" class="btn btn-primary pull-right" role="button"> Agregar evento </a></h1>
+<% eventos.forEach((evento) => { %>
+<div class="panel panel-info">
+    <div class="panel-heading">
+         <p><%= evento.Nombre %> <%= evento.Localizacion %>  <%= evento.fecha %><%= evento.Boletos %></p>
+    </div>
+ 
+</div>
+<% }) %>
+
+<% include _footer %>

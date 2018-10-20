@@ -1,0 +1,30 @@
+{
+  "name": "ticket",
+  "version": "1.0.0",
+  "description": "ticket app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "MGDVS",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-acl": "^2.0.4",
+    "express-fileupload": "^1.0.0-alpha.1",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.3.4",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "pdfkit": "^0.8.3",
+    "save": "^2.3.2"
+  }
+}

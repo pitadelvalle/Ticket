@@ -1,0 +1,32 @@
+<h1>Registro de eventos</h1>
+
+<form action="/addevent" method="post">
+    <div class="form-group">
+        <label for="Categoria">Seleccione su Categoria</label>
+        <select class="form-control" name="Categoria" type="text">
+            <option>Concierto</option>
+            <option>Deportes</option>
+            <option>Teatro/Cultura</option>
+            <option>Especial</option>
+        </select>
+
+    </div>
+    <div class="form-group">
+        <input name="Nombre" type="text" class="form-control"
+        placeholder="Nombre " required autofocus/>
+    </div>
+    <div class="form-group">
+        <input name="Localizacion" type="text" class="form-control"
+        placeholder="Localizacion" required/>
+    </div>
+    <label>
+        Fecha <input name="fecha" type="date"> 
+    </label>
+    <div class="form-group">
+        <input name="Boletos" type="number" class="form-control"
+        placeholder="Numero de boletos" required/>
+     </div>
+    <input type="submit" value="Registrarse" class="btn btn-primary btn-block"/>
+</form>
+
+<% include _footer %>
